@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IMC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card-wrapper">
+    <h1>Calculadora de IMC</h1>
+    <p class="subtitulo">Índice de Massa Corporal</p>
+
+    <div class="controles">
+
+      <div class="slider-box">
+        <label>Peso (kg)</label>
+        <div class="slider-row">
+          <input type="range" id="peso" min="30" max="200" value="70" step="1">
+          <span id="peso-val">70 kg</span>
+        </div>
+      </div>
+
+      <div class="slider-box">
+        <label>Altura (cm)</label>
+        <div class="slider-row">
+          <input type="range" id="altura" min="100" max="220" value="170" step="1">
+          <span id="altura-val">170 cm</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="resultado">
+      <p class="resultado-label">Seu IMC</p>
+      <p class="resultado-valor" id="imc-valor">24.2</p>
+      <span class="badge" id="imc-label">Normal</span>
+    </div>
+
+    <div class="escala-box">
+      <p class="escala-titulo">Escala de referência</p>
+      <div class="barra-container">
+        <div class="barra-gradiente"></div>
+        <div class="marcador" id="marcador"></div>
+      </div>
+      <div class="legenda">
+        <div class="legenda-item">
+          <span class="dot dot-azul"></span>
+          <p>Abaixo do peso</p>
+          <small>&lt; 18.5</small>
+        </div>
+        <div class="legenda-item">
+          <span class="dot dot-verde"></span>
+          <p>Normal</p>
+          <small>18.5 – 24.9</small>
+        </div>
+        <div class="legenda-item">
+          <span class="dot dot-amarelo"></span>
+          <p>Sobrepeso</p>
+          <small>25 – 29.9</small>
+        </div>
+        <div class="legenda-item">
+          <span class="dot dot-vermelho"></span>
+          <p>Obesidade</p>
+          <small>&gt; 30</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
